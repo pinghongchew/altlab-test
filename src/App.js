@@ -26,6 +26,11 @@ function App() {
     height: "650px"
   }
 
+  const styleTeam = {
+    backgroundImage: "linear-gradient(to top right, rgb(53, 53, 53), rgb(65, 40, 40)",
+    height: "650px"
+  }
+
   const connectWallet = async () => {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     console.log(accounts[0]);
@@ -72,6 +77,31 @@ function App() {
               FRESHLY BAKED BAMBOO CHARCOAL BUNS
             </div>
           </div>
+        </div>
+      </section>
+      <section style={styleTeam}>
+        <div class="text-white container mx-auto h-full">
+          <h2 class="pt-16 text-3xl mx-8">Team</h2>
+          <h3 class="pb-12 pt-4 text-md mx-8">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</h3>
+          <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-64">
+            <div class="border rounded-lg fade-in-mode-up opacity-0 text-center pt-28">
+              J.A.D
+            </div>
+            <div class="border rounded-lg fade-in-mode-up animation-delay-1 opacity-0 text-center pt-28">
+              Cirkus
+            </div>
+            <div class="border rounded-lg fade-in-mode-up animation-delay-2 opacity-0 text-center pt-28">
+              TacticalTofu
+            </div>
+            <div class="border rounded-lg fade-in-mode-up animation-delay-3 opacity-0 text-center pt-28">
+              JunnnnWei
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="text-center py-8 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+          © 2021 ALT Labs
         </div>
       </section>
     </>
