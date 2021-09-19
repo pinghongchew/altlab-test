@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/metallic-burger-web/static/css/main.ced1b117.chunk.css",
-    "main.js": "/metallic-burger-web/static/js/main.6af66b4d.chunk.js",
-    "main.js.map": "/metallic-burger-web/static/js/main.6af66b4d.chunk.js.map",
-    "runtime-main.js": "/metallic-burger-web/static/js/runtime-main.c4294077.js",
-    "runtime-main.js.map": "/metallic-burger-web/static/js/runtime-main.c4294077.js.map",
-    "static/js/2.e0bdb734.chunk.js": "/metallic-burger-web/static/js/2.e0bdb734.chunk.js",
-    "static/js/2.e0bdb734.chunk.js.map": "/metallic-burger-web/static/js/2.e0bdb734.chunk.js.map",
-    "static/js/3.414866f8.chunk.js": "/metallic-burger-web/static/js/3.414866f8.chunk.js",
-    "static/js/3.414866f8.chunk.js.map": "/metallic-burger-web/static/js/3.414866f8.chunk.js.map",
+    "main.js": "/metallic-burger-web/static/js/main.c874dd51.chunk.js",
+    "main.js.map": "/metallic-burger-web/static/js/main.c874dd51.chunk.js.map",
+    "runtime-main.js": "/metallic-burger-web/static/js/runtime-main.5c8943ca.js",
+    "runtime-main.js.map": "/metallic-burger-web/static/js/runtime-main.5c8943ca.js.map",
+    "static/js/2.e50011fd.chunk.js": "/metallic-burger-web/static/js/2.e50011fd.chunk.js",
+    "static/js/2.e50011fd.chunk.js.map": "/metallic-burger-web/static/js/2.e50011fd.chunk.js.map",
+    "static/js/3.19c3ec5f.chunk.js": "/metallic-burger-web/static/js/3.19c3ec5f.chunk.js",
+    "static/js/3.19c3ec5f.chunk.js.map": "/metallic-burger-web/static/js/3.19c3ec5f.chunk.js.map",
     "index.html": "/metallic-burger-web/index.html",
     "static/css/main.ced1b117.chunk.css.map": "/metallic-burger-web/static/css/main.ced1b117.chunk.css.map",
-    "static/js/2.e0bdb734.chunk.js.LICENSE.txt": "/metallic-burger-web/static/js/2.e0bdb734.chunk.js.LICENSE.txt",
+    "static/js/2.e50011fd.chunk.js.LICENSE.txt": "/metallic-burger-web/static/js/2.e50011fd.chunk.js.LICENSE.txt",
     "static/media/burger-gold.b1c08ac9.jpeg": "/metallic-burger-web/static/media/burger-gold.b1c08ac9.jpeg",
     "static/media/logo.6ce24c58.svg": "/metallic-burger-web/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c4294077.js",
-    "static/js/2.e0bdb734.chunk.js",
+    "static/js/runtime-main.5c8943ca.js",
+    "static/js/2.e50011fd.chunk.js",
     "static/css/main.ced1b117.chunk.css",
-    "static/js/main.6af66b4d.chunk.js"
+    "static/js/main.c874dd51.chunk.js"
   ]
 }
