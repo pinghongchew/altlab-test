@@ -1,8 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import goldenBurger from './image/burger-gold.jpeg';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    if (typeof window.ethereum !== 'undefined') {
+      console.log('MetaMask is installed!');
+    } else {
+      console.log('MetaMask is not install!');
+    }
+  })
+
+  const [address, setAddress] = useState("Connect Wallet");
+
   const styleMain = {
     backgroundImage: "url(https://myburgerlab.com/static/img/home/img_hero_3_desktop.jpg)",
     // backgroundPosition: "left -200px bottom 10px",
@@ -14,11 +26,20 @@ function App() {
     height: "650px"
   }
 
+  const connectWallet = async () => {
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    console.log(accounts[0]);
+    setAddress(accounts[0]);
+  }
+
   return (
     <>
       <section class="bg-center bg-no-repeat bg-cover" style={styleMain}>
+        <div class="flex flex-row-reverse text-white">
+          <button class="border rounded-sm px-4 py-2 inline-block place-self-right m-2" onClick={connectWallet}>{address}</button>
+        </div>
         <div class="container mx-auto h-full">
-          <div class="text-white grid grid-rows-3 grid-cols-2 grid-flow-col gap-4 py-32">
+          <div class="text-white grid grid-rows-3 grid-cols-2 grid-flow-col gap-4 py-16">
             <div class="row-span-1 col-span-1 m-8">
               <h1 class="text-6xl">Welcome to ALT Burger</h1>
             </div>
