@@ -8,6 +8,7 @@ import iconVege from './image/vege.png';
 import vidMain from "./image/vidMain.m4v"
 import iconMain from "./image/burger-icon.png"
 import imgBackground from "./image/background1.png"
+import bgDark from "./image/bg-dark.jpeg"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -30,20 +31,22 @@ function App() {
   }
 
   const styleMain = {
-    backgroundImage: `url(${imgBackground})`
+    // backgroundImage: `url(${imgBackground})`
     // backgroundImage: "url(https://myburgerlab.com/static/img/home/img_hero_3_desktop.jpg)",
+    backgroundImage: "linear-gradient(to right, #051e3e, #253e5e"
     // backgroundPosition: "left -200px bottom 10px",
     // height: "650px"
   }
 
-  const styleRarity = {
-    backgroundColor: "rgb(29, 29, 29)",
+  const styleOrigin = {
+    backgroundImage: "linear-gradient(to right, #251e3e, #453e5e"
+    // backgroundImage: `url(${bgDark})`
     // height: "650px"
   }
 
   const styleTeam = {
-    backgroundImage: "linear-gradient(to top right, rgb(53, 53, 53), rgb(65, 40, 40)",
-    height: "650px"
+    backgroundImage: "linear-gradient(to right, #451e3e, #654e5e",
+    // height: "650px"
   }
 
   const styleIconBun = {
@@ -62,6 +65,11 @@ function App() {
     height: "200px"
   }
 
+  const styleElements = {
+    width: "140px",
+    height: "140px"
+  }
+
   const onclickHamburgerMenu = () => {
     setShowMobileMenu(!showMobileMenu);
     console.log(showMobileMenu)
@@ -77,40 +85,40 @@ function App() {
   return (
     <>
       <section class="bg-center bg-no-repeat bg-cover" style={styleMain}>
-        <nav class="container mx-auto lg:px-8 sm:flex items-center">
+        <nav class="container mx-auto lg:px-8 lg:flex items-center">
           <div class="flex items-center">
             <div class="inline mr-auto my-2 mx-1 px-4 py-2"><img src={iconMain} style={styleIconMain}></img></div>
-            <div class="inline text-3xl text-white my-2 mx-1 px-4 py-2 block sm:hidden ml-auto">
+            <div class="inline text-3xl text-white my-2 mx-1 px-4 py-2 block lg:hidden ml-auto">
               <a href="javascript:void(0);" class="icon" onClick={onclickHamburgerMenu}>
                 <i class="fa fa-bars"></i>
               </a>
             </div>
           </div>
-          <ul class="ml-auto flex items-center flex-col sm:flex-row text-white text-xl inline-block">
-            <li class={"order-1 my-2 mx-1 px-4 py-2 sm:block " + (showMobileMenu ? "block" : "hidden")}>Origin</li>
-            <li class={"order-2 my-2 mx-1 px-4 py-2 sm:block " + (showMobileMenu ? "block" : "hidden")}>Roadmap</li>
-            <li class={"order-3 my-2 mx-1 px-4 py-2 sm:block " + (showMobileMenu ? "block" : "hidden")}>Team</li>
-            <li class={"order-4 sm:block " + (showMobileMenu ? "block" : "hidden")}>
+          <ul class="ml-auto flex items-center flex-col lg:flex-row text-white text-xl inline-block">
+            <li class={"order-1 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Origin</li>
+            <li class={"order-2 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Roadmap</li>
+            <li class={"order-3 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Team</li>
+            <li class={"order-4 lg:block " + (showMobileMenu ? "block" : "hidden")}>
               <button class="border rounded-lg px-4 py-2 inline-block my-2 mx-1" onClick={connectWallet}>{displayAddress}</button>
             </li>
           </ul>
         </nav>
         <div class="container mx-auto h-full lg:px-8">
-          <div class="flex flex-wrap text-white sm:py-32 pt-4 pb-16">
+          <div class="flex flex-wrap text-white lg:py-32 pt-4 pb-16">
             <div class="flex-1">
-              <h1 class="text-5xl sm:ml-40 py-4 mx-8">Welcome to <br /> <em>alt</em> BURGER</h1>
-              <h2 class="text-2xl sm:ml-40 py-4 mx-8">4100 randomly generated 3D characters aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
-              <div class="sm:ml-40 mx-8 py-4">
+              <h1 class="text-5xl py-4 px-8 lg:ml-40 ">Welcome to <br /> <em>alt</em> BURGER</h1>
+              <h2 class="text-2xl py-4 px-8 lg:ml-40">4100 randomly generated 3D characters aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
+              <div class="lg:ml-40 px-8 pb-10 lg:py-4">
                 <button class="border rounded-lg inline-block px-8 py-2">Mint</button>
               </div>
             </div>
-            <div class="flex-1">
-              <video class="max-w-xs mx-8 sm:ml-auto sm:mr-40" src={vidMain} autoPlay loop muted playsInline></video>
+            <div class="flex-1 flex items-center">
+              <video class="max-w-xs lg:max-w-screen-sm mx-auto" src={vidMain} autoPlay loop muted playsInline></video>
             </div>
           </div>
         </div>
       </section>
-      <section style={styleRarity}>
+      <section class="bg-center bg-no-repeat bg-cover" style={styleOrigin}>
         <div class="ticker-wrap">
           <div class="ticker">
             <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
@@ -126,7 +134,27 @@ function App() {
           </div>
         </div>
         <div class="text-white container mx-auto h-full">
-          <h2 class="text-3xl mx-8">Origin</h2>
+          <h2 class="text-3xl mx-8 my-8">Origin</h2>
+          <div class="flex my-6 lg:-mb-14">
+            <div class="border rounded-full mx-auto hover:bg-purple-700" style={styleElements}></div>
+            <div class="border rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div>
+          </div>
+          <div class="flex my-6 lg:my-0">
+            <div class="border rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}></div>
+            <div class="border rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}></div>
+          </div>
+          <div class="flex my-6 lg:my-4">
+            <div class="border rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-80 hover:bg-purple-700" style={styleElements}></div>
+            <div class="border rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}></div>
+          </div>
+          <div class="flex my-6 lg:my-0">
+            <div class="border rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}></div>
+            <div class="border rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}></div>
+          </div>
+          <div class="flex lg:-mt-14 hidden lg:block">
+            <div class="border rounded-full mx-auto hover:bg-purple-700" style={styleElements}></div>
+          </div>
+
           <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-full py-32">
             <div class="border fade-in-mode-up opacity-0" style={styleDivBun}>
               <div class="flex justify-around items-center">
@@ -174,9 +202,7 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <div class="text-center py-8 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div class="text-center py-8 text-white">
           © 2021 ALT Labs
         </div>
       </section>
