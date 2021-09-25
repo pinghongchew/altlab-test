@@ -9,6 +9,10 @@ import vidMain from "./image/vidMain.m4v"
 import iconMain from "./image/burger-icon.png"
 import imgBackground from "./image/background1.png"
 import bgDark from "./image/bg-dark.jpeg"
+import imgGreenElement from "./image/green-gem.png"
+import imgRedElement from "./image/red-gem.png"
+import imgBlueElement from "./image/blue-gem.png"
+import imgYellowElement from "./image/yellow-gem.png"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -39,7 +43,8 @@ function App() {
   }
 
   const styleOrigin = {
-    backgroundImage: "linear-gradient(to right, #BAA8EF, #CAB8FF"
+    // backgroundImage: "linear-gradient(to right, #BAA8EF, #CAB8FF"
+    backgroundImage: "linear-gradient(to right, #101010, #202020"
     // backgroundImage: `url(${bgDark})`
     // height: "650px"
   }
@@ -142,16 +147,24 @@ function App() {
             <h2 class="text-4xl font-extrabold mx-8 my-8 mx-auto">Origin</h2>
           </div>
           <div class="flex my-6 lg:-mb-14">
-            <div class="border rounded-full mx-auto hover:bg-purple-700" style={styleElements}></div>
-            <div class="border rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div>
+            <div class="rounded-full mx-auto hover:bg-purple-700" style={styleElements}>
+              <img src={imgGreenElement}></img>
+            </div>
+            <div class="rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div>
           </div>
           <div class="flex my-6 lg:my-0">
-            <div class="border rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}></div>
-            <div class="border rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}></div>
+            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}>
+              <img src={imgRedElement}></img>
+            </div>
+            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}>
+              <img src={imgYellowElement}></img>
+            </div>
           </div>
           <div class="flex my-6 lg:my-4">
-            <div class="border rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-80 hover:bg-purple-700" style={styleElements}></div>
-            <div class="border rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}></div>
+            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-80 hover:bg-purple-700" style={styleElements}>
+              <img src={imgBlueElement}></img>
+            </div>
+            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}></div>
           </div>
           <div class="flex my-6 lg:my-0">
             <div class="border rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}></div>
