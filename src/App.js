@@ -33,19 +33,23 @@ function App() {
   const styleMain = {
     // backgroundImage: `url(${imgBackground})`
     // backgroundImage: "url(https://myburgerlab.com/static/img/home/img_hero_3_desktop.jpg)",
-    backgroundImage: "linear-gradient(to right, #051e3e, #253e5e"
+    backgroundImage: "linear-gradient(to right, #48c6af, #a8e6cf"
     // backgroundPosition: "left -200px bottom 10px",
     // height: "650px"
   }
 
   const styleOrigin = {
-    backgroundImage: "linear-gradient(to right, #251e3e, #453e5e"
+    backgroundImage: "linear-gradient(to right, #BAA8EF, #CAB8FF"
     // backgroundImage: `url(${bgDark})`
     // height: "650px"
   }
 
+  const styleRoadmap = {
+    backgroundImage: "linear-gradient(to right, #DCDFA6, #FCFFA6",
+  }
+
   const styleTeam = {
-    backgroundImage: "linear-gradient(to right, #451e3e, #654e5e",
+    backgroundImage: "linear-gradient(to right, #A5CEFA, #B5DEFF",
     // height: "650px"
   }
 
@@ -94,22 +98,22 @@ function App() {
               </a>
             </div>
           </div>
-          <ul class="ml-auto flex items-center flex-col lg:flex-row text-white text-xl inline-block">
+          <ul class="ml-auto flex items-center font-extrabold flex-col lg:flex-row text-white text-xl inline-block">
             <li class={"order-1 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Origin</li>
             <li class={"order-2 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Roadmap</li>
             <li class={"order-3 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Team</li>
             <li class={"order-4 lg:block " + (showMobileMenu ? "block" : "hidden")}>
-              <button class="border rounded-lg px-4 py-2 inline-block my-2 mx-1" onClick={connectWallet}>{displayAddress}</button>
+              <button class="border-2 border-white rounded-lg px-4 py-2 inline-block my-2 mx-1 font-extrabold" onClick={connectWallet}>{displayAddress}</button>
             </li>
           </ul>
         </nav>
         <div class="container mx-auto h-full lg:px-8">
-          <div class="flex flex-wrap text-white lg:py-32 pt-4 pb-16">
+          <div class="flex flex-wrap text-white font-extrabold lg:py-32 pt-4 pb-16">
             <div class="flex-1">
               <h1 class="text-5xl py-4 px-8 lg:ml-40 ">Welcome to <br /> <em>alt</em> BURGER</h1>
               <h2 class="text-2xl py-4 px-8 lg:ml-40">4100 randomly generated 3D characters aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
               <div class="lg:ml-40 px-8 pb-10 lg:py-4">
-                <button class="border rounded-lg inline-block px-8 py-2">Mint</button>
+                <button class="border-2 border-white font-extrabold rounded-lg inline-block px-8 py-2 text-xl">Mint</button>
               </div>
             </div>
             <div class="flex-1 flex items-center">
@@ -119,7 +123,7 @@ function App() {
         </div>
       </section>
       <section class="bg-center bg-no-repeat bg-cover" style={styleOrigin}>
-        <div class="ticker-wrap">
+        {/* <div class="ticker-wrap">
           <div class="ticker">
             <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
             <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
@@ -132,9 +136,11 @@ function App() {
             <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
             <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
           </div>
-        </div>
+        </div> */}
         <div class="text-white container mx-auto h-full">
-          <h2 class="text-3xl mx-8 my-8">Origin</h2>
+          <div class="flex">
+            <h2 class="text-4xl font-extrabold mx-8 my-8 mx-auto">Origin</h2>
+          </div>
           <div class="flex my-6 lg:-mb-14">
             <div class="border rounded-full mx-auto hover:bg-purple-700" style={styleElements}></div>
             <div class="border rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div>
@@ -183,9 +189,18 @@ function App() {
           </div>
         </div>
       </section>
+      <section style={styleRoadmap}>
+        <div class="text-white container mx-auto h-full">
+          <div class="flex">
+            <h2 class="text-4xl font-extrabold mx-8 my-8 mx-auto">Roadmap</h2>
+          </div>
+        </div>
+      </section>
       <section style={styleTeam}>
         <div class="text-white container mx-auto h-full">
-          <h2 class="pt-16 text-3xl mx-8">Team</h2>
+          <div class="flex">
+            <h2 class="text-4xl font-extrabold mx-8 my-8 mx-auto">Team</h2>
+          </div>
           <h3 class="pb-12 pt-4 text-md mx-8">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</h3>
           <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-64">
             <div class="border rounded-lg fade-in-mode-up opacity-0 text-center pt-28">
