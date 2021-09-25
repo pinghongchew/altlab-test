@@ -8,7 +8,10 @@ import { Helmet } from 'react-helmet'
 ReactDOM.render(
   <React.StrictMode>
     <Helmet>
-      <title>ALT Burger</title>
+      <title>Alt Burger - NFT Collection</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"></link>
     </Helmet>
     <App />
   </React.StrictMode>,
