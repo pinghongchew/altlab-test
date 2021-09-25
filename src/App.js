@@ -6,6 +6,7 @@ import iconPatty from './image/patty.png';
 import iconCheese from './image/cheese.png';
 import iconVege from './image/vege.png';
 import vidMain from "./image/vidMain.m4v"
+import iconMain from "./image/burger-icon.png"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -18,7 +19,14 @@ function App() {
     }
   })
 
-  const [address, setAddress] = useState("Connect Wallet");
+  const [address, setAddress] = useState(0);
+  const [displayAddress, setDisplayAddress] = useState("Connect Wallet");
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const styleIconMain = {
+    width: "50px",
+    height: "50px"
+  }
 
   const styleMain = {
     backgroundImage: "url(https://myburgerlab.com/static/img/home/img_hero_3_desktop.jpg)",
@@ -52,40 +60,50 @@ function App() {
     height: "200px"
   }
 
+  const onclickHamburgerMenu = () => {
+    setShowMobileMenu(!showMobileMenu);
+    console.log(showMobileMenu)
+  }
+
   const connectWallet = async () => {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-    console.log(accounts[0]);
+    console.log("Address: ", accounts[0]);
     setAddress(accounts[0]);
+    setDisplayAddress(accounts[0].substring(0, 6) + "..." + accounts[0].substring(accounts[0].length - 4, accounts[0].length));
   }
 
   return (
     <>
       <section class="bg-center bg-no-repeat bg-cover" style={styleMain}>
-        <nav class="container mx-auto lg:px-8">
-          <ul class="flex flex-row-reverse text-white text-xl">
-            <li class="order-6 border-2 my-2 ml-2 mr-auto px-4 py-2 font-semibold"><i>alt</i> LAB</li>
-            <li class="order-4 my-2 mx-1 px-4 py-2">Origin</li>
-            <li class="order-3 my-2 mx-1 px-4 py-2">Roadmap</li>
-            <li class="order-2 my-2 mx-1 px-4 py-2">Team</li>
-            <li class="order-1">
-              <button class="border rounded-lg px-4 py-2 inline-block my-2 mx-1" onClick={connectWallet}>{address}</button>
+        <nav class="container mx-auto lg:px-8 sm:flex items-center">
+          <div class="flex items-center">
+            <div class="inline mr-auto my-2 mx-1 px-4 py-2"><img src={iconMain} style={styleIconMain}></img></div>
+            <div class="inline text-3xl text-white my-2 mx-1 px-4 py-2 block sm:hidden ml-auto">
+              <a href="javascript:void(0);" class="icon" onClick={onclickHamburgerMenu}>
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+          <ul class="ml-auto flex items-center flex-col sm:flex-row text-white text-xl inline-block">
+            <li class={"order-1 my-2 mx-1 px-4 py-2 sm:block " + (showMobileMenu ? "block" : "hidden")}>Origin</li>
+            <li class={"order-2 my-2 mx-1 px-4 py-2 sm:block " + (showMobileMenu ? "block" : "hidden")}>Roadmap</li>
+            <li class={"order-3 my-2 mx-1 px-4 py-2 sm:block " + (showMobileMenu ? "block" : "hidden")}>Team</li>
+            <li class={"order-4 sm:block " + (showMobileMenu ? "block" : "hidden")}>
+              <button class="border rounded-lg px-4 py-2 inline-block my-2 mx-1" onClick={connectWallet}>{displayAddress}</button>
             </li>
           </ul>
         </nav>
         <div class="container mx-auto h-full lg:px-8">
-          <div class="text-white grid grid-rows-3 grid-cols-5 grid-flow-col gap-4 py-32">
-            <div class="row-span-1 col-span-3">
-              <h1 class="text-5xl">Welcome to <em>alt</em> BURGER</h1>
+          <div class="flex flex-wrap text-white sm:py-32 pt-4 pb-16">
+            <div class="flex-1">
+              <h1 class="text-5xl sm:ml-40 py-4 mx-8">Welcome to <br /> <em>alt</em> BURGER</h1>
+              <h2 class="text-2xl sm:ml-40 py-4 mx-8">4100 randomly generated 3D characters aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
+              <div class="sm:ml-40 mx-8 py-4">
+                <button class="border rounded-lg inline-block px-8 py-2">Mint</button>
+              </div>
             </div>
-            <div class="row-span-1 col-span-3">
-              <h2 class="text-2xl">4100 randomly generated 3D characters aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
-            </div>
-            <div class="row-span-1">
-              <button class="border rounded-lg inline-block px-8 py-2">Mint</button>
-            </div>
-            <div class="place-self-end row-span-3 col-span-2">
-              <video class="max-w-xs" src={vidMain} autoPlay loop muted></video>
-              {/* https://chibiapes.com/assets/videos/video.mp4 */}
+            <div class="flex-1">
+              <video class="max-w-xs mx-8 sm:ml-auto sm:mr-40" src={vidMain} autoPlay loop muted playsInline></video>
             </div>
           </div>
         </div>
