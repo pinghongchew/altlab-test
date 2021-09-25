@@ -7,6 +7,7 @@ import iconCheese from './image/cheese.png';
 import iconVege from './image/vege.png';
 import vidMain from "./image/vidMain.m4v"
 import iconMain from "./image/burger-icon.png"
+import imgBackground from "./image/background1.png"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
   }
 
   const styleMain = {
-    backgroundImage: "url(https://myburgerlab.com/static/img/home/img_hero_3_desktop.jpg)",
+    backgroundImage: `url(${imgBackground})`
+    // backgroundImage: "url(https://myburgerlab.com/static/img/home/img_hero_3_desktop.jpg)",
     // backgroundPosition: "left -200px bottom 10px",
     // height: "650px"
   }
