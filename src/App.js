@@ -9,10 +9,16 @@ import vidMain from "./image/vidMain.m4v"
 import iconMain from "./image/burger-icon.png"
 import imgBackground from "./image/background1.png"
 import bgDark from "./image/bg-dark.jpeg"
-import imgGreenElement from "./image/green-gem.png"
-import imgRedElement from "./image/red-gem.png"
-import imgBlueElement from "./image/blue-gem.png"
-import imgYellowElement from "./image/yellow-gem.png"
+import imgGreenElement from "./image/green-alter.png"
+import imgRedElement from "./image/red-alter.png"
+// import imgBlueElement from "./image/darkblue1.png"
+import imgYellowElement from "./image/yellow-alter.png"
+import imgOrangeElement from "./image/orange-alter.png"
+import imgIndigoElement from "./image/indigo-alter.png"
+import imgPinkElement from "./image/pink-alter.png"
+import imgDarkElement from "./image/dark-alter.png"
+import imgTealElement from "./image/teal-alter.png"
+import imgLogo from "./image/burger-logo.png"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -37,24 +43,24 @@ function App() {
   const styleMain = {
     // backgroundImage: `url(${imgBackground})`
     // backgroundImage: "url(https://myburgerlab.com/static/img/home/img_hero_3_desktop.jpg)",
-    backgroundImage: "linear-gradient(to right, #48c6af, #a8e6cf"
+    backgroundImage: "linear-gradient(to right, #101010, #101010"
     // backgroundPosition: "left -200px bottom 10px",
     // height: "650px"
   }
 
   const styleOrigin = {
     // backgroundImage: "linear-gradient(to right, #BAA8EF, #CAB8FF"
-    backgroundImage: "linear-gradient(to right, #101010, #202020"
+    backgroundImage: "linear-gradient(to right, #000000, #000000"
     // backgroundImage: `url(${bgDark})`
     // height: "650px"
   }
 
   const styleRoadmap = {
-    backgroundImage: "linear-gradient(to right, #DCDFA6, #FCFFA6",
+    backgroundImage: "linear-gradient(to right, #101010, #101010",
   }
 
   const styleTeam = {
-    backgroundImage: "linear-gradient(to right, #A5CEFA, #B5DEFF",
+    backgroundImage: "linear-gradient(to right, #202020, #202020",
     // height: "650px"
   }
 
@@ -75,8 +81,8 @@ function App() {
   }
 
   const styleElements = {
-    width: "140px",
-    height: "140px"
+    width: "300px",
+    height: "300px"
   }
 
   const onclickHamburgerMenu = () => {
@@ -96,7 +102,7 @@ function App() {
       <section class="bg-center bg-no-repeat bg-cover" style={styleMain}>
         <nav class="container mx-auto lg:px-8 lg:flex items-center">
           <div class="flex items-center">
-            <div class="inline mr-auto my-2 mx-1 px-4 py-2"><img src={iconMain} style={styleIconMain}></img></div>
+            <div class="inline mr-auto my-2 mx-1 px-4 py-2"><img src={imgLogo} style={styleIconMain}></img></div>
             <div class="inline text-3xl text-white my-2 mx-1 px-4 py-2 block lg:hidden ml-auto">
               <a href="javascript:void(0);" class="icon" onClick={onclickHamburgerMenu}>
                 <i class="fa fa-bars"></i>
@@ -146,32 +152,40 @@ function App() {
           <div class="flex">
             <h2 class="text-4xl font-extrabold mx-8 my-8 mx-auto">Origin</h2>
           </div>
-          <div class="flex my-6 lg:-mb-14">
-            <div class="rounded-full mx-auto hover:bg-purple-700" style={styleElements}>
+          <div class="flex my-6 lg:-mb-48">
+            <div class="rounded-full mx-auto hover:bg-green-700" style={styleElements}>
               <img src={imgGreenElement}></img>
             </div>
             <div class="rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div>
           </div>
           <div class="flex my-6 lg:my-0">
-            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}>
+            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-red-700" style={styleElements}>
               <img src={imgRedElement}></img>
             </div>
-            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}>
+            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-yellow-700" style={styleElements}>
               <img src={imgYellowElement}></img>
             </div>
           </div>
-          <div class="flex my-6 lg:my-4">
-            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-80 hover:bg-purple-700" style={styleElements}>
-              <img src={imgBlueElement}></img>
+          <div class="flex my-6 lg:-my-20">
+            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-96 hover:bg-blue-700" style={styleElements}>
+              <img src={imgTealElement}></img>
             </div>
-            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}></div>
+            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-yellow-700" style={styleElements}>
+              <img src={imgOrangeElement}></img>
+            </div>
           </div>
           <div class="flex my-6 lg:my-0">
-            <div class="border rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}></div>
-            <div class="border rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}></div>
+            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}>
+              <img src={imgIndigoElement}></img>
+            </div>
+            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}>
+              <img src={imgPinkElement}></img>
+            </div>
           </div>
-          <div class="flex lg:-mt-14 hidden lg:block">
-            <div class="border rounded-full mx-auto hover:bg-purple-700" style={styleElements}></div>
+          <div class="flex lg:-mt-40 hidden lg:block">
+            <div class="rounded-full mx-auto hover:bg-purple-700" style={styleElements}>
+              <img src={imgDarkElement}></img>
+            </div>
           </div>
 
           <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-full py-32">

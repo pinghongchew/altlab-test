@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet';
+import iconLogo from "./image/burger-logo.png";
 
 ReactDOM.render(
   <React.StrictMode>
     <Helmet>
       <title>Alt Burger - NFT Collection</title>
+      <link rel="icon" href={iconLogo}/>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"></link>

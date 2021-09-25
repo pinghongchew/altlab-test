@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/metallic-burger-web/static/css/main.3ab37bd0.chunk.css",
-    "main.js": "/metallic-burger-web/static/js/main.4406f355.chunk.js",
-    "main.js.map": "/metallic-burger-web/static/js/main.4406f355.chunk.js.map",
+    "main.js": "/metallic-burger-web/static/js/main.12efb582.chunk.js",
+    "main.js.map": "/metallic-burger-web/static/js/main.12efb582.chunk.js.map",
     "runtime-main.js": "/metallic-burger-web/static/js/runtime-main.bc0b5ab3.js",
     "runtime-main.js.map": "/metallic-burger-web/static/js/runtime-main.bc0b5ab3.js.map",
     "static/js/2.82e7d069.chunk.js": "/metallic-burger-web/static/js/2.82e7d069.chunk.js",
@@ -14,19 +14,23 @@
     "static/js/2.82e7d069.chunk.js.LICENSE.txt": "/metallic-burger-web/static/js/2.82e7d069.chunk.js.LICENSE.txt",
     "static/media/background1.206793c3.png": "/metallic-burger-web/static/media/background1.206793c3.png",
     "static/media/bg-dark.2ed42f2e.jpeg": "/metallic-burger-web/static/media/bg-dark.2ed42f2e.jpeg",
+    "static/media/blue-gem.f0920347.png": "/metallic-burger-web/static/media/blue-gem.f0920347.png",
     "static/media/bun.7de36e96.png": "/metallic-burger-web/static/media/bun.7de36e96.png",
     "static/media/burger-gold.b1c08ac9.jpeg": "/metallic-burger-web/static/media/burger-gold.b1c08ac9.jpeg",
     "static/media/burger-icon.973f9f77.png": "/metallic-burger-web/static/media/burger-icon.973f9f77.png",
     "static/media/cheese.cccf2fd9.png": "/metallic-burger-web/static/media/cheese.cccf2fd9.png",
+    "static/media/green-gem.10a2f06f.png": "/metallic-burger-web/static/media/green-gem.10a2f06f.png",
     "static/media/logo.6ce24c58.svg": "/metallic-burger-web/static/media/logo.6ce24c58.svg",
     "static/media/patty.94e861cc.png": "/metallic-burger-web/static/media/patty.94e861cc.png",
+    "static/media/red-gem.484620c3.png": "/metallic-burger-web/static/media/red-gem.484620c3.png",
     "static/media/vege.4c38d12f.png": "/metallic-burger-web/static/media/vege.4c38d12f.png",
-    "static/media/vidMain.184f8baf.m4v": "/metallic-burger-web/static/media/vidMain.184f8baf.m4v"
+    "static/media/vidMain.184f8baf.m4v": "/metallic-burger-web/static/media/vidMain.184f8baf.m4v",
+    "static/media/yellow-gem.04616c26.png": "/metallic-burger-web/static/media/yellow-gem.04616c26.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bc0b5ab3.js",
     "static/js/2.82e7d069.chunk.js",
     "static/css/main.3ab37bd0.chunk.css",
-    "static/js/main.4406f355.chunk.js"
+    "static/js/main.12efb582.chunk.js"
   ]
 }
