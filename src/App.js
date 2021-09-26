@@ -48,10 +48,8 @@ function App() {
   }
 
   const styleOrigin = {
-    // backgroundImage: "linear-gradient(to right, #BAA8EF, #CAB8FF"
-    backgroundImage: "linear-gradient(to right, rgb(40, 40, 40), rgb(40, 40, 40)"
-    // backgroundImage: `url(${bgDark})`
-    // height: "650px"
+    // backgroundImage: "linear-gradient(to right, rgb(40, 40, 40), rgb(40, 40, 40)"
+    backgroundImage: "linear-gradient(to right, #8ad6cc, #8ad6cc"
   }
 
   const styleRoadmap = {
@@ -80,8 +78,8 @@ function App() {
   }
 
   const styleElements = {
-    width: "250px",
-    height: "250px"
+    width: "200px",
+    height: "200px"
   }
 
   const onclickHamburgerMenu = () => {
@@ -111,20 +109,20 @@ function App() {
               </a>
             </div>
           </div>
-          <ul class="ml-auto flex items-center font-extrabold flex-col lg:flex-row text-lg inline-block">
-            <li class={"order-1 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Origin</li>
-            <li class={"order-2 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Roadmap</li>
-            <li class={"order-3 my-2 mx-1 px-4 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Team</li>
-            <li class={"order-4 lg:block " + (showMobileMenu ? "block" : "hidden")}>
-              <button class="border-2 border-black rounded-lg px-4 py-2 inline-block my-2 mx-1 font-extrabold hover:bg-green-300" onClick={connectWallet}>{displayAddress}</button>
+          <ul class="ml-auto flex items-end lg:items-center font-extrabold flex-col lg:flex-row text-lg inline-block">
+            <li class={"order-1 my-2 px-6 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Origin</li>
+            <li class={"order-2 my-2 px-6 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Roadmap</li>
+            <li class={"order-3 my-2 px-6 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Team</li>
+            <li class={"order-4 px-6 lg:px-0 lg:block " + (showMobileMenu ? "block" : "hidden")}>
+              <button class="border-2 border-black rounded-lg px-4 py-2 inline-block my-2 font-extrabold hover:bg-green-300" onClick={connectWallet}>{displayAddress}</button>
             </li>
           </ul>
         </nav>
         <div class="container mx-auto h-full px-4 lg:px-8">
           <div class="flex-col pb-16">
             <img class="max-w-xs -ml-16 -mb-16 -mt-12 lg:mt-0" src={gifMain} />
-            <h1 class="text-3xl lg:text-7xl leading-tight tracking-tighter py-4">A unique burger made from precious metal infuse with alterium</h1>
-            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">4096 + 4^ randomly generated 3D characters aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
+            <h1 class="text-3xl lg:text-7xl leading-tight tracking-tighter py-4"><span class="font-righteous">ALTBurger</span> collection by <span class="font-righteous">ALTLAB</span></h1>
+            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">4096 + 4^ randomly generated 3D burgers aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
             <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">^Individually crafted by the 4 founders.</h2>
             <div class="mt-5">
               <button class="border-2 border-black font-extrabold rounded-full px-16 py-3 text-xl bg-green-100 hover:bg-green-300">MINT</button>
@@ -150,15 +148,25 @@ function App() {
             <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
           </div>
         </div> */}
-        <div class="text-white container mx-auto h-full">
-          <div class="flex">
-            <h2 class="text-6xl leading-tight tracking-tighter pt-4 mx-auto">Origin</h2>
+        <div class="container mx-auto h-full px-4 lg:px-8 pt-10 lg:pt-20 pb-10 lg:pb-20">
+          <div class="flex-col">
+            <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter">Origin</h2>
+            <div class="flex flex-wrap justify-around my-8">
+              <div class="border rounded-sm h-20 w-20 my-4">RED</div>
+              <div class="border rounded-sm h-20 w-20 my-4">ORANGE</div>
+              <div class="border rounded-sm h-20 w-20 my-4">YELLOW</div>
+              <div class="border rounded-sm h-20 w-20 my-4">GREEN</div>
+              <div class="border rounded-sm h-20 w-20 my-4">BLUE</div>
+              <div class="border rounded-sm h-20 w-20 my-4">INDIGO</div>
+              <div class="border rounded-sm h-20 w-20 my-4">VIOLET</div>
+              <div class="border rounded-sm h-20 w-20 my-4">DARK</div>
+            </div>
           </div>
-          <div class="flex my-6 lg:-mb-28">
+          {/*<div class="flex my-6 lg:-mb-28">
             <div class="rounded-full mx-auto hover:bg-red-600" style={styleElements}>
               <img src={imgRedElement}></img>
             </div>
-            {/* <div class="rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div> */}
+            <div class="rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div>
           </div>
           <div class="flex my-6 lg:my-0">
             <div class="rounded-full mx-auto lg:ml-auto lg:mr-36 hover:bg-yellow-600" style={styleElements}>
@@ -188,7 +196,7 @@ function App() {
             <div class="rounded-full mx-auto hover:bg-gray-400" style={styleElements}>
               <img src={imgDarkElement}></img>
             </div>
-          </div>
+          </div> */}
 
           {/* <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-full py-32">
             <div class="border fade-in-mode-up opacity-0" style={styleDivBun}>
