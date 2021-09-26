@@ -268,15 +268,15 @@ function App() {
             <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter">Team</h2>
           </div>
           <h3 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</h3>
-          <div class="flex flex-wrap justify-around">
-            <div class="flex items-center rounded-lg m-4 w-1/4">
+          <div class="flex flex-wrap -ml-4 lg:ml-0 lg:justify-around">
+            <div class="flex items-center rounded-lg m-4 lg:w-1/4">
               <img src={gifMain} class="h-40"></img>
               <div class="flex-col">
                 <div class="text-3xl">JAD</div>
                 <div class="font-dm-mono">Developer</div>
               </div>
             </div>
-            <div class="flex items-center rounded-lg m-4 w-1/4">
+            <div class="flex items-center rounded-lg m-4 lg:w-1/4">
               <img src={gifMain} class="h-40"></img>
               <div class="flex-col">
                 <div class="text-3xl">Cirkus</div>
@@ -284,15 +284,15 @@ function App() {
               </div>
             </div>
           </div>
-          <div class="flex flex-wrap justify-around">
-            <div class="flex items-center rounded-lg m-4 w-1/4">
+          <div class="flex flex-wrap -ml-4 lg:ml-0 lg:justify-around">
+            <div class="flex items-center rounded-lg m-4 lg:w-1/4">
               <img src={gifMain} class="h-40"></img>
               <div class="flex-col">
                 <div class="text-3xl">Tofu</div>
                 <div class="font-dm-mono">Artist</div>
               </div>
             </div>
-            <div class="flex items-center rounded-lg m-4 w-1/4">
+            <div class="flex items-center rounded-lg m-4 lg:w-1/4">
               <img src={gifMain} class="h-40"></img>
               <div class="flex-col">
                 <div class="text-3xl">JUN</div>
