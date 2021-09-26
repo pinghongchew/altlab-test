@@ -43,11 +43,8 @@ function App() {
   }
 
   const styleMain = {
-    // backgroundImage: `url(${imgBackground})`
-    // backgroundImage: "url(https://myburgerlab.com/static/img/home/img_hero_3_desktop.jpg)",
-    backgroundImage: "linear-gradient(to right, rgb(255, 245, 183), rgb(255, 245, 183)"
-    // backgroundPosition: "left -200px bottom 10px",
-    // height: "650px"
+    // backgroundImage: "linear-gradient(to right, rgb(255, 245, 183), rgb(255, 245, 183)"
+    backgroundImage: "linear-gradient(to right, #b2eee6, #b2eee6"
   }
 
   const styleOrigin = {
@@ -104,11 +101,11 @@ function App() {
       <section class="bg-center bg-no-repeat bg-cover" style={styleMain}>
         <nav class="container mx-auto lg:px-8 lg:flex items-center">
           <div class="flex items-center">
-            <div class="flex mr-auto my-2 mx-1 px-4 py-2 items-center">
+            <div class="flex mr-auto my-2 mx-1 py-2 items-center">
               <img src={gifMain} style={styleIconMain}></img>
               <h1 class="text-4xl font-righteous">ALTLAB</h1>
             </div>
-            <div class="inline text-3xl text-white my-2 mx-1 px-4 py-2 block lg:hidden ml-auto">
+            <div class="inline text-3xl text-black my-2 mx-1 px-4 py-2 block lg:hidden ml-auto">
               <a href="javascript:void(0);" class="icon" onClick={onclickHamburgerMenu}>
                 <i class="fa fa-bars"></i>
               </a>
@@ -123,14 +120,14 @@ function App() {
             </li>
           </ul>
         </nav>
-        <div class="container mx-auto h-full lg:px-8">
+        <div class="container mx-auto h-full px-4 lg:px-8">
           <div class="flex-col pb-16">
-            <img class="max-w-xs -ml-16 -mb-16" src={gifMain} />
-            <h1 class="text-7xl leading-tight tracking-tighter py-4">A unique burger made from precious metal infuse with alterium</h1>
-            <h2 class="text-xl py-4 font-dm-mono tracking-tighter">4096 + 4^ randomly generated 3D characters aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
-            <h2 class="text-xl py-4 font-dm-mono tracking-tighter">^Individually crafted by the 4 founders.</h2>
+            <img class="max-w-xs -ml-16 -mb-16 -mt-12 lg:mt-0" src={gifMain} />
+            <h1 class="text-3xl lg:text-7xl leading-tight tracking-tighter py-4">A unique burger made from precious metal infuse with alterium</h1>
+            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">4096 + 4^ randomly generated 3D characters aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
+            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">^Individually crafted by the 4 founders.</h2>
             <div class="mt-5">
-              <button class="border-2 border-black font-extrabold rounded-full px-16 py-3 text-xl bg-green-200 hover:bg-green-300">MINT</button>
+              <button class="border-2 border-black font-extrabold rounded-full px-16 py-3 text-xl bg-green-100 hover:bg-green-300">MINT</button>
             </div>
             {/* <div class="flex-1 flex items-center">
               <video class="max-w-xs lg:max-w-screen-sm mx-auto" src={vidMain} autoPlay loop muted playsInline></video>

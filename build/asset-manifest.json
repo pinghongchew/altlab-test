@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/altburger/static/css/main.3ab37bd0.chunk.css",
-    "main.js": "/altburger/static/js/main.5d0a919d.chunk.js",
-    "main.js.map": "/altburger/static/js/main.5d0a919d.chunk.js.map",
+    "main.css": "/altburger/static/css/main.0dd8f058.chunk.css",
+    "main.js": "/altburger/static/js/main.958f2808.chunk.js",
+    "main.js.map": "/altburger/static/js/main.958f2808.chunk.js.map",
     "runtime-main.js": "/altburger/static/js/runtime-main.f32f98c5.js",
     "runtime-main.js.map": "/altburger/static/js/runtime-main.f32f98c5.js.map",
     "static/js/2.d2d69ac9.chunk.js": "/altburger/static/js/2.d2d69ac9.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.3cc239c7.chunk.js": "/altburger/static/js/3.3cc239c7.chunk.js",
     "static/js/3.3cc239c7.chunk.js.map": "/altburger/static/js/3.3cc239c7.chunk.js.map",
     "index.html": "/altburger/index.html",
-    "static/css/main.3ab37bd0.chunk.css.map": "/altburger/static/css/main.3ab37bd0.chunk.css.map",
+    "static/css/main.0dd8f058.chunk.css.map": "/altburger/static/css/main.0dd8f058.chunk.css.map",
     "static/js/2.d2d69ac9.chunk.js.LICENSE.txt": "/altburger/static/js/2.d2d69ac9.chunk.js.LICENSE.txt",
     "static/media/background1.206793c3.png": "/altburger/static/media/background1.206793c3.png",
     "static/media/bg-dark.2ed42f2e.jpeg": "/altburger/static/media/bg-dark.2ed42f2e.jpeg",
@@ -23,10 +23,12 @@
     "static/media/green-alter.201e8bce.png": "/altburger/static/media/green-alter.201e8bce.png",
     "static/media/indigo-alter.460c299d.png": "/altburger/static/media/indigo-alter.460c299d.png",
     "static/media/logo.6ce24c58.svg": "/altburger/static/media/logo.6ce24c58.svg",
+    "static/media/main.27130999.gif": "/altburger/static/media/main.27130999.gif",
     "static/media/orange-alter.43ebed7f.png": "/altburger/static/media/orange-alter.43ebed7f.png",
     "static/media/patty.94e861cc.png": "/altburger/static/media/patty.94e861cc.png",
     "static/media/pink-alter.808b9ff8.png": "/altburger/static/media/pink-alter.808b9ff8.png",
     "static/media/red-alter.312baf7a.png": "/altburger/static/media/red-alter.312baf7a.png",
+    "static/media/redBurgerTransparent.31af6288.png": "/altburger/static/media/redBurgerTransparent.31af6288.png",
     "static/media/teal-alter.68991ab3.png": "/altburger/static/media/teal-alter.68991ab3.png",
     "static/media/vege.4c38d12f.png": "/altburger/static/media/vege.4c38d12f.png",
     "static/media/vidMain.184f8baf.m4v": "/altburger/static/media/vidMain.184f8baf.m4v",
@@ -35,7 +37,7 @@
   "entrypoints": [
     "static/js/runtime-main.f32f98c5.js",
     "static/js/2.d2d69ac9.chunk.js",
-    "static/css/main.3ab37bd0.chunk.css",
-    "static/js/main.5d0a919d.chunk.js"
+    "static/css/main.0dd8f058.chunk.css",
+    "static/js/main.958f2808.chunk.js"
   ]
 }
