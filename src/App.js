@@ -36,6 +36,8 @@ function App() {
   const [address, setAddress] = useState(0);
   const [displayAddress, setDisplayAddress] = useState("Connect Wallet");
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showElementDesc, setShowElementDesc] = useState(false);
+  const [strElementDesc, setStrElementDesc] = useState("");
 
   const styleIconMain = {
     width: "50px",
@@ -53,11 +55,11 @@ function App() {
   }
 
   const styleRoadmap = {
-    backgroundImage: "linear-gradient(to right, #101010, #101010",
+    backgroundImage: "linear-gradient(to right, #f99192, #f99192",
   }
 
   const styleTeam = {
-    backgroundImage: "linear-gradient(to right, #202020, #202020",
+    backgroundImage: "linear-gradient(to right, #f97171, #f97171",
     // height: "650px"
   }
 
@@ -86,6 +88,44 @@ function App() {
     setShowMobileMenu(!showMobileMenu);
     console.log(showMobileMenu)
   }
+
+  const onclickElement = (id) => {
+    setShowElementDesc(true);
+    let color = "";
+
+    switch (id) {
+      case 1:
+        color = "RED";
+        break;
+      case 2:
+        color = "ORANGE";
+        break;
+      case 3:
+        color = "YELLOW";
+        break;
+      case 4:
+        color = "GREEN";
+        break;
+      case 5:
+        color = "BLUE";
+        break;
+      case 6:
+        color = "INDIGO";
+        break;
+      case 7:
+        color = "VIOLET";
+        break;
+      case 8:
+        color = "DARK";
+        break;
+      default:
+        break;
+    }
+
+    let desc = `What is ${color}? \n Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`;
+    setStrElementDesc(desc);
+  }
+
 
   const connectWallet = async () => {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -134,32 +174,21 @@ function App() {
         </div>
       </section>
       <section class="bg-center bg-no-repeat bg-cover" style={styleOrigin}>
-        {/* <div class="ticker-wrap">
-          <div class="ticker">
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-            <li class="ticker__item"><img src={iconBun} style={styleMovingBun} /></li>
-          </div>
-        </div> */}
         <div class="container mx-auto h-full px-4 lg:px-8 pt-10 lg:pt-20 pb-10 lg:pb-20">
           <div class="flex-col">
             <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter">Origin</h2>
             <div class="flex flex-wrap justify-around my-8">
-              <div class="border rounded-sm h-20 w-20 my-4">RED</div>
-              <div class="border rounded-sm h-20 w-20 my-4">ORANGE</div>
-              <div class="border rounded-sm h-20 w-20 my-4">YELLOW</div>
-              <div class="border rounded-sm h-20 w-20 my-4">GREEN</div>
-              <div class="border rounded-sm h-20 w-20 my-4">BLUE</div>
-              <div class="border rounded-sm h-20 w-20 my-4">INDIGO</div>
-              <div class="border rounded-sm h-20 w-20 my-4">VIOLET</div>
-              <div class="border rounded-sm h-20 w-20 my-4">DARK</div>
+              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(1)}>Red</div>
+              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(2)}>Orange</div>
+              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(3)}>Yellow</div>
+              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(4)}>Green</div>
+              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(5)}>Blue</div>
+              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(6)}>Indigo</div>
+              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(7)}>Violet</div>
+              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(8)}>Dark</div>
+            </div>
+            <div class={"flex justify-around " + (showElementDesc ? "block" : "hidden")}>
+              <div class="border-2 border-black text-xl rounded-lg p-8 h-full w-full lg:w-9/12 font-dm-mono">{strElementDesc}</div>
             </div>
           </div>
           {/*<div class="flex my-6 lg:-mb-28">
@@ -227,36 +256,52 @@ function App() {
         </div>
       </section>
       <section style={styleRoadmap}>
-        <div class="text-white container mx-auto h-full">
+        <div class="container mx-auto h-full px-4 lg:px-8 pt-10 lg:pt-20 pb-10 lg:pb-20">
           <div class="flex">
-            <h2 class="text-4xl font-extrabold mx-8 my-8 mx-auto">Roadmap</h2>
+            <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter">Roadmap</h2>
           </div>
         </div>
       </section>
       <section style={styleTeam}>
-        <div class="text-white container mx-auto h-full">
+        <div class="container mx-auto h-full px-4 lg:px-8 pt-10 lg:pt-20 pb-10 lg:pb-20">
           <div class="flex">
-            <h2 class="text-4xl font-extrabold mx-8 my-8 mx-auto">Team</h2>
+            <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter">Team</h2>
           </div>
-          <h3 class="pb-12 pt-4 text-md mx-8">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</h3>
-          <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-64">
-            <div class="border rounded-lg fade-in-mode-up opacity-0 text-center pt-28">
-              JAD
+          <h3 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</h3>
+          <div class="flex flex-wrap justify-around">
+            <div class="flex items-center rounded-lg m-4 w-1/4">
+              <img src={gifMain} class="h-40"></img>
+              <div class="flex-col">
+                <div class="text-3xl">JAD</div>
+                <div class="font-dm-mono">Developer</div>
+              </div>
             </div>
-            <div class="border rounded-lg fade-in-mode-up animation-delay-1 opacity-0 text-center pt-28">
-              Cirkus
+            <div class="flex items-center rounded-lg m-4 w-1/4">
+              <img src={gifMain} class="h-40"></img>
+              <div class="flex-col">
+                <div class="text-3xl">Cirkus</div>
+                <div class="font-dm-mono">Artist</div>
+              </div>
             </div>
-            <div class="border rounded-lg fade-in-mode-up animation-delay-2 opacity-0 text-center pt-28">
-              Tofu
+          </div>
+          <div class="flex flex-wrap justify-around">
+            <div class="flex items-center rounded-lg m-4 w-1/4">
+              <img src={gifMain} class="h-40"></img>
+              <div class="flex-col">
+                <div class="text-3xl">Tofu</div>
+                <div class="font-dm-mono">Artist</div>
+              </div>
             </div>
-            <div class="border rounded-lg fade-in-mode-up animation-delay-3 opacity-0 text-center pt-28">
-              JUN
+            <div class="flex items-center rounded-lg m-4 w-1/4">
+              <img src={gifMain} class="h-40"></img>
+              <div class="flex-col">
+                <div class="text-3xl">JUN</div>
+                <div class="font-dm-mono">Community Manager</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="text-center py-8 text-white">
-          © 2021 ALT Labs
-        </div>
+        <div class="text-center text-xl py-8 font-dm-mono">© 2021 <span class="font-righteous">ALTLAB</span></div>
       </section>
     </>
   );
