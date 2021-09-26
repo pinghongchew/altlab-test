@@ -81,8 +81,8 @@ function App() {
   }
 
   const styleElements = {
-    width: "300px",
-    height: "300px"
+    width: "250px",
+    height: "250px"
   }
 
   const onclickHamburgerMenu = () => {
@@ -150,45 +150,45 @@ function App() {
         </div> */}
         <div class="text-white container mx-auto h-full">
           <div class="flex">
-            <h2 class="text-4xl font-extrabold mx-8 my-8 mx-auto">Origin</h2>
+            <h2 class="text-4xl font-extrabold mx-8 mt-8 mx-auto">Origin</h2>
           </div>
-          <div class="flex my-6 lg:-mb-48">
-            <div class="rounded-full mx-auto hover:bg-green-700" style={styleElements}>
-              <img src={imgGreenElement}></img>
-            </div>
-            <div class="rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div>
-          </div>
-          <div class="flex my-6 lg:my-0">
-            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-red-700" style={styleElements}>
+          <div class="flex my-6 lg:-mb-28">
+            <div class="rounded-full mx-auto hover:bg-red-600" style={styleElements}>
               <img src={imgRedElement}></img>
             </div>
-            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-yellow-700" style={styleElements}>
+            {/* <div class="rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div> */}
+          </div>
+          <div class="flex my-6 lg:my-0">
+            <div class="rounded-full mx-auto lg:ml-auto lg:mr-36 hover:bg-yellow-600" style={styleElements}>
+              <img src={imgOrangeElement}></img>
+            </div>
+            <div class="rounded-full mx-auto lg:mr-auto lg:ml-36 hover:bg-yellow-300" style={styleElements}>
               <img src={imgYellowElement}></img>
             </div>
           </div>
-          <div class="flex my-6 lg:-my-20">
-            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-96 hover:bg-blue-700" style={styleElements}>
-              <img src={imgTealElement}></img>
+          <div class="flex my-6 lg:-my-4">
+            <div class="rounded-full mx-auto lg:ml-auto lg:mr-80 hover:bg-green-600" style={styleElements}>
+              <img src={imgGreenElement}></img>
             </div>
-            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-yellow-700" style={styleElements}>
-              <img src={imgOrangeElement}></img>
+            <div class="rounded-full mx-auto lg:mr-auto lg:ml-80 hover:bg-green-200" style={styleElements}>
+              <img src={imgTealElement}></img>
             </div>
           </div>
           <div class="flex my-6 lg:my-0">
-            <div class="rounded-full mx-auto lg:ml-auto lg:mr-0 lg:mr-44 hover:bg-purple-700" style={styleElements}>
-              <img src={imgIndigoElement}></img>
-            </div>
-            <div class="rounded-full mx-auto lg:mr-auto lg:ml-0 hover:bg-purple-700" style={styleElements}>
+            <div class="rounded-full mx-auto lg:ml-auto lg:mr-36 hover:bg-pink-400" style={styleElements}>
               <img src={imgPinkElement}></img>
             </div>
+            <div class="rounded-full mx-auto lg:mr-auto lg:ml-36 hover:bg-purple-700" style={styleElements}>
+              <img src={imgIndigoElement}></img>
+            </div>
           </div>
-          <div class="flex lg:-mt-40 hidden lg:block">
-            <div class="rounded-full mx-auto hover:bg-purple-700" style={styleElements}>
+          <div class="flex lg:-mt-28 hidden lg:block">
+            <div class="rounded-full mx-auto hover:bg-gray-400" style={styleElements}>
               <img src={imgDarkElement}></img>
             </div>
           </div>
 
-          <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-full py-32">
+          {/* <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-full py-32">
             <div class="border fade-in-mode-up opacity-0" style={styleDivBun}>
               <div class="flex justify-around items-center">
                 <div><img src={iconBun} style={styleIconBun} /></div>
@@ -213,7 +213,7 @@ function App() {
                 <div class="text-center">Vege</div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section style={styleRoadmap}>
@@ -240,7 +240,7 @@ function App() {
               Tofu
             </div>
             <div class="border rounded-lg fade-in-mode-up animation-delay-3 opacity-0 text-center pt-28">
-              JunnnnWei
+              JUN
             </div>
           </div>
         </div>
