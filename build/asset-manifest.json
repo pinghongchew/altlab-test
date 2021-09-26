@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/altburger/static/css/main.0dd8f058.chunk.css",
-    "main.js": "/altburger/static/js/main.67502cc6.chunk.js",
-    "main.js.map": "/altburger/static/js/main.67502cc6.chunk.js.map",
+    "main.js": "/altburger/static/js/main.2ed545eb.chunk.js",
+    "main.js.map": "/altburger/static/js/main.2ed545eb.chunk.js.map",
     "runtime-main.js": "/altburger/static/js/runtime-main.f32f98c5.js",
     "runtime-main.js.map": "/altburger/static/js/runtime-main.f32f98c5.js.map",
     "static/js/2.fc7da76b.chunk.js": "/altburger/static/js/2.fc7da76b.chunk.js",
@@ -38,6 +38,6 @@
     "static/js/runtime-main.f32f98c5.js",
     "static/js/2.fc7da76b.chunk.js",
     "static/css/main.0dd8f058.chunk.css",
-    "static/js/main.67502cc6.chunk.js"
+    "static/js/main.2ed545eb.chunk.js"
   ]
 }

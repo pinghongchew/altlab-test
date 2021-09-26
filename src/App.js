@@ -257,8 +257,13 @@ function App() {
       </section>
       <section style={styleRoadmap}>
         <div class="container mx-auto h-full px-4 lg:px-8 pt-10 lg:pt-20 pb-10 lg:pb-20">
-          <div class="flex">
-            <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter">Roadmap</h2>
+          <div class="flex-col">
+            <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter mb-12">Roadmap</h2>
+            <div class="border rounded-lg p-8 max-w-lg my-4 bg-purple-100 font-dm-mono text-lg"><strong>0% Sales</strong> <br/> We are going to host weekly events to giveaway NFTs and pre-sale passes.</div>
+            <div class="border rounded-lg p-8 max-w-lg my-4 ml-auto bg-purple-100 font-dm-mono text-lg"><strong>25% Sales</strong> <br/> We will giveaway 10 ALTBurgers to our burger holders.</div>
+            <div class="border rounded-lg p-8 max-w-lg my-4 bg-purple-100 font-dm-mono text-lg"><strong>50% Sales</strong> <br/> We will giveaway 20 ALTBurgers to our burger holders.</div>
+            <div class="border rounded-lg p-8 max-w-lg my-4 ml-auto bg-purple-100 font-dm-mono text-lg"><strong>75% Sales</strong> <br/> We will giveaway 2 ETH to our burger holders.</div>
+            <div class="border rounded-lg p-8 max-w-lg my-4 bg-purple-100 font-dm-mono text-lg"><strong>100% Sales</strong> <br/> We will giveaway 5 ETH to our burger holders and 100 3D printed ALTBurgers to the lucky members.</div>
           </div>
         </div>
       </section>
