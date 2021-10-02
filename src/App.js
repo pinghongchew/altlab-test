@@ -1,27 +1,14 @@
-import logo from './logo.svg';
-import './App.scss';
-import goldenBurger from './image/burger-gold.jpeg';
-import iconBun from './image/bun.png';
-import iconPatty from './image/patty.png';
-import iconCheese from './image/cheese.png';
-import iconVege from './image/vege.png';
-import vidMain from "./image/vidMain.m4v"
-import iconMain from "./image/burger-icon.png"
-import imgBackground from "./image/background1.png"
-import bgDark from "./image/bg-dark.jpeg"
-import imgGreenElement from "./image/green-alter.png"
-import imgRedElement from "./image/red-alter.png"
-// import imgBlueElement from "./image/darkblue1.png"
-import imgYellowElement from "./image/yellow-alter.png"
-import imgOrangeElement from "./image/orange-alter.png"
-import imgIndigoElement from "./image/indigo-alter.png"
-import imgPinkElement from "./image/pink-alter.png"
-import imgDarkElement from "./image/dark-alter.png"
-import imgTealElement from "./image/teal-alter.png"
-import imgLogo from "./image/burger-logo.png"
-import imgRedBurgerTransparent from "./image/redBurgerTransparent.png"
-import gifMain from "./image/main.gif"
 import { useEffect, useState } from 'react';
+import './App.scss';
+import gifMain from "./asset/main.gif";
+import imgShow1 from "./asset/1.jpeg";
+import imgShow2 from "./asset/2.jpeg";
+import imgShow3 from "./asset/3.jpeg";
+import imgShow4 from "./asset/4.jpeg";
+import imgShow5 from "./asset/5.jpeg";
+import imgShow6 from "./asset/6.jpeg";
+import imgShow7 from "./asset/7.jpeg";
+import imgShow8 from "./asset/8.jpeg";
 
 function App() {
 
@@ -49,9 +36,14 @@ function App() {
     backgroundImage: "linear-gradient(to right, #b2eee6, #b2eee6"
   }
 
-  const styleOrigin = {
+  const styleShow = {
     // backgroundImage: "linear-gradient(to right, rgb(40, 40, 40), rgb(40, 40, 40)"
     backgroundImage: "linear-gradient(to right, #8ad6cc, #8ad6cc"
+  }
+
+  const stylePerks = {
+    // backgroundImage: "linear-gradient(to right, rgb(40, 40, 40), rgb(40, 40, 40)"
+    backgroundImage: "linear-gradient(to right, #fff5c1, #fff5c1"
   }
 
   const styleRoadmap = {
@@ -59,8 +51,8 @@ function App() {
   }
 
   const styleTeam = {
-    backgroundImage: "linear-gradient(to right, #f97171, #f97171",
-    // height: "650px"
+    // backgroundImage: "linear-gradient(to right, #f97171, #f97171",
+    backgroundImage: "linear-gradient(to right, #96d0fa, #96d0fa"
   }
 
   const styleIconBun = {
@@ -84,49 +76,6 @@ function App() {
     height: "200px"
   }
 
-  const onclickHamburgerMenu = () => {
-    setShowMobileMenu(!showMobileMenu);
-    console.log(showMobileMenu)
-  }
-
-  const onclickElement = (id) => {
-    setShowElementDesc(true);
-    let color = "";
-
-    switch (id) {
-      case 1:
-        color = "RED";
-        break;
-      case 2:
-        color = "ORANGE";
-        break;
-      case 3:
-        color = "YELLOW";
-        break;
-      case 4:
-        color = "GREEN";
-        break;
-      case 5:
-        color = "BLUE";
-        break;
-      case 6:
-        color = "INDIGO";
-        break;
-      case 7:
-        color = "VIOLET";
-        break;
-      case 8:
-        color = "DARK";
-        break;
-      default:
-        break;
-    }
-
-    let desc = `What is ${color}? \n Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`;
-    setStrElementDesc(desc);
-  }
-
-
   const connectWallet = async () => {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     console.log("Address: ", accounts[0]);
@@ -137,33 +86,23 @@ function App() {
   return (
     <>
       <section class="bg-center bg-no-repeat bg-cover" style={styleMain}>
-        <nav class="container mx-auto lg:px-8 lg:flex items-center">
-          <div class="flex items-center">
-            <div class="flex mr-auto my-2 mx-1 py-2 items-center">
+        <nav class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="flex items-center py-4">
+            <div class="flex mr-auto items-center">
               <img src={gifMain} style={styleIconMain}></img>
-              <h1 class="text-4xl font-righteous">ALTLAB</h1>
+              <h1 class="text-3xl font-righteous">Alt Lab</h1>
             </div>
-            <div class="inline text-3xl text-black my-2 mx-1 px-4 py-2 block lg:hidden ml-auto">
-              <a href="javascript:void(0);" class="icon" onClick={onclickHamburgerMenu}>
-                <i class="fa fa-bars"></i>
-              </a>
-            </div>
+            <button class="border-2 border-gray-700 rounded-full px-6 py-2 inline-block font-extrabold hover:bg-green-300" onClick={connectWallet}>{displayAddress}</button>
           </div>
-          <ul class="ml-auto flex items-end lg:items-center font-extrabold flex-col lg:flex-row text-lg inline-block">
-            <li class={"order-1 my-2 px-6 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Origin</li>
-            <li class={"order-2 my-2 px-6 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Roadmap</li>
-            <li class={"order-3 my-2 px-6 py-2 lg:block " + (showMobileMenu ? "block" : "hidden")}>Team</li>
-            <li class={"order-4 px-6 lg:px-0 lg:block " + (showMobileMenu ? "block" : "hidden")}>
-              <button class="border-2 border-black rounded-lg px-4 py-2 inline-block my-2 font-extrabold hover:bg-green-300" onClick={connectWallet}>{displayAddress}</button>
-            </li>
-          </ul>
         </nav>
-        <div class="container mx-auto h-full px-4 lg:px-8">
+
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div class="flex-col pb-16">
             <img class="max-w-xs -ml-16 -mb-16 -mt-12 lg:mt-0" src={gifMain} />
-            <h1 class="text-3xl lg:text-7xl leading-tight tracking-tighter py-4"><span class="font-righteous">ALTBurger</span> collection by <span class="font-righteous">ALTLAB</span></h1>
-            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">4096 + 4^ randomly generated 3D burgers aping around the Ethereum blockchain as ERC-721 tokens and hosted on IPFS.</h2>
-            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">^Individually crafted by the 4 founders.</h2>
+            <h1 class="text-3xl lg:text-7xl leading-tight tracking-tighter py-4 font-righteous">Welcome to Alt Burger</h1>
+            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">100 individually rendered 3D burgers dropping on ethereum NFT space. Each Alt Burger crafted from different elements, representing different fortune.</h2>
+            <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">> First ERC-721 tokens by Alt Lab.</p>
+            <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">> Hosted on IPFS.</p>
             <div class="mt-5">
               <button class="border-2 border-black font-extrabold rounded-full px-16 py-3 text-xl bg-green-100 hover:bg-green-300">MINT</button>
             </div>
@@ -173,140 +112,131 @@ function App() {
           </div>
         </div>
       </section>
-      <section class="bg-center bg-no-repeat bg-cover" style={styleOrigin}>
-        <div class="container mx-auto h-full px-4 lg:px-8 pt-10 lg:pt-20 pb-10 lg:pb-20">
-          <div class="flex-col">
-            <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter">Origin</h2>
-            <div class="flex flex-wrap justify-around my-8">
-              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(1)}>Red</div>
-              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(2)}>Orange</div>
-              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(3)}>Yellow</div>
-              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(4)}>Green</div>
-              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(5)}>Blue</div>
-              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(6)}>Indigo</div>
-              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(7)}>Violet</div>
-              <div class="border border-black rounded-sm h-20 w-20 my-4" onClick={() => onclickElement(8)}>Dark</div>
-            </div>
-            <div class={"flex justify-around " + (showElementDesc ? "block" : "hidden")}>
-              <div class="border-2 border-black text-xl rounded-lg p-8 h-full w-full lg:w-9/12 font-dm-mono">{strElementDesc}</div>
-            </div>
-          </div>
-          {/*<div class="flex my-6 lg:-mb-28">
-            <div class="rounded-full mx-auto hover:bg-red-600" style={styleElements}>
-              <img src={imgRedElement}></img>
-            </div>
-            <div class="rounded-full mx-auto block lg:hidden hover:bg-purple-700" style={styleElements}></div>
-          </div>
-          <div class="flex my-6 lg:my-0">
-            <div class="rounded-full mx-auto lg:ml-auto lg:mr-36 hover:bg-yellow-600" style={styleElements}>
-              <img src={imgOrangeElement}></img>
-            </div>
-            <div class="rounded-full mx-auto lg:mr-auto lg:ml-36 hover:bg-yellow-300" style={styleElements}>
-              <img src={imgYellowElement}></img>
-            </div>
-          </div>
-          <div class="flex my-6 lg:-my-4">
-            <div class="rounded-full mx-auto lg:ml-auto lg:mr-80 hover:bg-green-600" style={styleElements}>
-              <img src={imgGreenElement}></img>
-            </div>
-            <div class="rounded-full mx-auto lg:mr-auto lg:ml-80 hover:bg-green-200" style={styleElements}>
-              <img src={imgTealElement}></img>
-            </div>
-          </div>
-          <div class="flex my-6 lg:my-0">
-            <div class="rounded-full mx-auto lg:ml-auto lg:mr-36 hover:bg-pink-400" style={styleElements}>
-              <img src={imgPinkElement}></img>
-            </div>
-            <div class="rounded-full mx-auto lg:mr-auto lg:ml-36 hover:bg-purple-700" style={styleElements}>
-              <img src={imgIndigoElement}></img>
-            </div>
-          </div>
-          <div class="flex lg:-mt-28 hidden lg:block">
-            <div class="rounded-full mx-auto hover:bg-gray-400" style={styleElements}>
-              <img src={imgDarkElement}></img>
-            </div>
-          </div> */}
 
-          {/* <div class="grid grid-flow-row grid-cols-4 gap-4 mx-8 h-full py-32">
-            <div class="border fade-in-mode-up opacity-0" style={styleDivBun}>
-              <div class="flex justify-around items-center">
-                <div><img src={iconBun} style={styleIconBun} /></div>
-                <div class="text-center">Bun</div>
-              </div>
-            </div>
-            <div class="border fade-in-mode-up animation-delay-1 opacity-0" style={styleDivBun}>
-              <div class="flex justify-around items-center">
-                <div><img src={iconPatty} style={styleIconBun} /></div>
-                <div class="text-center">Patty</div>
-              </div>
-            </div>
-            <div class="border fade-in-mode-up animation-delay-2 opacity-0" style={styleDivBun}>
-              <div class="flex justify-around items-center">
-                <div><img src={iconCheese} style={styleIconBun} /></div>
-                <div class="text-center">Cheese</div>
-              </div>
-            </div>
-            <div class="border fade-in-mode-up animation-delay-3 opacity-0" style={styleDivBun}>
-              <div class="flex justify-around items-center">
-                <div><img src={iconVege} style={styleIconBun} /></div>
-                <div class="text-center">Vege</div>
-              </div>
-            </div>
-          </div> */}
+      <section class="bg-center bg-no-repeat bg-cover" style={styleShow}>
+        <div class="mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="flex flex-wrap xl:flex-nowrap overflow-hidden justify-center py-10">
+            <img class="max-h-40 sm:max-h-60 m-2 sm:mx-10 rounded-full" src={imgShow1}></img>
+            <img class="max-h-40 sm:max-h-60 m-2 sm:mx-10 rounded-full" src={imgShow2}></img>
+            <img class="max-h-40 sm:max-h-60 m-2 sm:mx-10 rounded-full" src={imgShow3}></img>
+            <img class="max-h-40 sm:max-h-60 m-2 sm:mx-10 rounded-full" src={imgShow4}></img>
+            <img class="max-h-60 mx-10 hidden lg:block rounded-full" src={imgShow5}></img>
+            <img class="max-h-60 mx-10 hidden lg:block rounded-full" src={imgShow6}></img>
+            <img class="max-h-60 mx-10 hidden lg:block rounded-full" src={imgShow7}></img>
+            <img class="max-h-60 mx-10 hidden lg:block rounded-full" src={imgShow8}></img>
+          </div>
         </div>
       </section>
+
+      <section style={stylePerks}>
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="flex-col py-10 sm:py-20">
+            <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Alt Perks</h2>
+            <div class="flex flex-wrap justify-around pt-4 sm:pt-10">
+              <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
+                <div class="text-2xl">Unique NFTs</div>
+                <div class="font-dm-mono pt-2">Your Alt Burger is uniquely minted on the Ethereum Blockchain enabling proof of ownership.</div>
+              </div>
+              <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
+                <div class="text-2xl">Commercial Rights</div>
+                <div class="font-dm-mono pt-2">You own the commercial rights and intellectual property of your Alt Burger. You can create and monetize from your Alt Burger without any limitation.</div>
+              </div>
+              <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
+                <div class="text-2xl">Community First</div>
+                <div class="font-dm-mono pt-2">We always listen to your ideas and suggestions. Please join our community to critique and inspire our future projects.</div>
+              </div>
+              <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
+                <div class="text-2xl">Exclusive Benefits</div>
+                <div class="font-dm-mono pt-2">You will be granted early access to our future projects. Other benefits like giveaway or merch discounts will be announced along the way.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
       <section style={styleRoadmap}>
-        <div class="container mx-auto h-full px-4 lg:px-8 pt-10 lg:pt-20 pb-10 lg:pb-20">
-          <div class="flex-col">
-            <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter mb-12">Roadmap</h2>
-            <div class="border rounded-lg p-8 max-w-lg my-4 bg-purple-100 font-dm-mono text-lg"><strong>0% Sales</strong> <br/> We are going to host weekly events to giveaway NFTs and pre-sale passes.</div>
-            <div class="border rounded-lg p-8 max-w-lg my-4 ml-auto bg-purple-100 font-dm-mono text-lg"><strong>25% Sales</strong> <br/> We will giveaway 10 ALTBurgers to our burger holders.</div>
-            <div class="border rounded-lg p-8 max-w-lg my-4 bg-purple-100 font-dm-mono text-lg"><strong>50% Sales</strong> <br/> We will giveaway 20 ALTBurgers to our burger holders.</div>
-            <div class="border rounded-lg p-8 max-w-lg my-4 ml-auto bg-purple-100 font-dm-mono text-lg"><strong>75% Sales</strong> <br/> We will giveaway 2 ETH to our burger holders.</div>
-            <div class="border rounded-lg p-8 max-w-lg my-4 bg-purple-100 font-dm-mono text-lg"><strong>100% Sales</strong> <br/> We will giveaway 5 ETH to our burger holders and 100 3D printed ALTBurgers to the lucky members.</div>
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="flex-col py-10 sm:py-20">
+            <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Alt Universe</h2>
+            <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">We are here for the marathon, not the sprint, and in turn, we aim to push the boundaries, break into the physical world and do it our way. We are currently in the kitchen prepping our roadmap; in the meantime, here are our next steps</p>
+            <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
+              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">1</div>
+              <div class="flex flex-col">
+                <h4 class="font-righteous tracking-wide text-2xl">Alt Burger</h4>
+                <p>Alt Lab enters the NFT space and drops the very first NFT project.</p>
+              </div>
+            </div>
+            <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
+              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">2</div>
+              <div class="flex flex-col">
+                <h4 class="font-righteous tracking-wide text-2xl">Alt Community</h4>
+                <p>We will continue building our community and developing the Alt Universe.</p>
+              </div>
+            </div>
+            <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
+              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">3</div>
+              <div class="flex flex-col">
+                <h4 class="font-righteous tracking-wide text-2xl">Alt Merch</h4>
+                <p>We will start a merch store to sell 3D printed Alt Burger.</p>
+              </div>
+            </div>
+            <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
+              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">4</div>
+              <div class="flex flex-col">
+                <div class="font-righteous tracking-wide text-2xl">Alt Sandwich</div>
+                <div>We are going to start a new project to build up our community.</div>
+              </div>
+            </div>
+            <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
+              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">5</div>
+              <div class="flex flex-col">
+                <div class="font-righteous tracking-wide text-2xl">Alt Avatar</div>
+                <div>We will drop the avatar collection for Alt Burger holders.</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <section style={styleTeam}>
-        <div class="container mx-auto h-full px-4 lg:px-8 pt-10 lg:pt-20 pb-10 lg:pb-20">
-          <div class="flex">
-            <h2 class="text-2xl lg:text-6xl leading-tight tracking-tighter">Team</h2>
-          </div>
-          <h3 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</h3>
-          <div class="flex flex-wrap -ml-4 lg:ml-0 lg:justify-around">
-            <div class="flex items-center rounded-lg m-4 lg:w-1/4">
-              <img src={gifMain} class="h-40"></img>
-              <div class="flex-col">
-                <div class="text-3xl">JAD</div>
-                <div class="font-dm-mono">Developer</div>
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="flex-col py-10 sm:py-20">
+            <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Alt Team</h2>
+            <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</p>
+            <div class="flex flex-wrap lg:ml-0 lg:justify-around">
+              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
+                <img src={gifMain} class="h-40"></img>
+                <div class="flex-col">
+                  <div class="text-3xl">JAD</div>
+                  <div class="font-dm-mono">Developer</div>
+                </div>
               </div>
-            </div>
-            <div class="flex items-center rounded-lg m-4 lg:w-1/4">
-              <img src={gifMain} class="h-40"></img>
-              <div class="flex-col">
-                <div class="text-3xl">Cirkus</div>
-                <div class="font-dm-mono">Artist</div>
+              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
+                <img src={gifMain} class="h-40"></img>
+                <div class="flex-col">
+                  <div class="text-3xl">Cirkus</div>
+                  <div class="font-dm-mono">Artist</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="flex flex-wrap -ml-4 lg:ml-0 lg:justify-around">
-            <div class="flex items-center rounded-lg m-4 lg:w-1/4">
-              <img src={gifMain} class="h-40"></img>
-              <div class="flex-col">
-                <div class="text-3xl">Tofu</div>
-                <div class="font-dm-mono">Artist</div>
+              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
+                <img src={gifMain} class="h-40"></img>
+                <div class="flex-col">
+                  <div class="text-3xl">Tofu</div>
+                  <div class="font-dm-mono">Artist</div>
+                </div>
               </div>
-            </div>
-            <div class="flex items-center rounded-lg m-4 lg:w-1/4">
-              <img src={gifMain} class="h-40"></img>
-              <div class="flex-col">
-                <div class="text-3xl">JUN</div>
-                <div class="font-dm-mono">Community Manager</div>
+              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
+                <img src={gifMain} class="h-40"></img>
+                <div class="flex-col">
+                  <div class="text-3xl">JUN</div>
+                  <div class="font-dm-mono">Community Manager</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-center text-xl py-8 font-dm-mono">© 2021 <span class="font-righteous">ALTLAB</span></div>
+        <div class="text-center text-xl py-8 font-dm-mono">© 2021 <span class="font-righteous">Alt Lab</span></div>
       </section>
     </>
   );

@@ -9,7 +9,7 @@ import iconLogo from "./image/burger-logo.png";
 ReactDOM.render(
   <React.StrictMode>
     <Helmet>
-      <title>ALT Burger - NFT Collection</title>
+      <title>Alt Burger - NFT Collection</title>
       <link rel="icon" href={iconLogo} />
       {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
