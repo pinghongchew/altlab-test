@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Helmet } from 'react-helmet';
-import iconLogo from "./image/burger-logo.png";
+import iconLogo from "./asset/1.jpeg";
 
 ReactDOM.render(
   <React.StrictMode>
