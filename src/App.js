@@ -153,7 +153,7 @@ function App() {
               </div>
               <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
                 <div class="text-2xl">Community First</div>
-                <div class="font-dm-mono pt-2">We always listen to your ideas and suggestions. Please join our community to critique and inspire our future projects.</div>
+                <div class="font-dm-mono pt-2">We always listen to your ideas and suggestions. Please join our community to critique and inspire our future projects.</div>
               </div>
               <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
                 <div class="text-2xl">Exclusive Benefits</div>
