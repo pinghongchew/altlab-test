@@ -86,7 +86,7 @@ function App() {
   return (
     <>
       <section class="bg-center bg-no-repeat bg-cover" style={styleMain}>
-        <nav class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <nav class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="flex items-center py-4">
             <div class="flex mr-auto items-center">
               <img src={gifMain} style={styleIconMain}></img>
@@ -96,7 +96,7 @@ function App() {
           </div>
         </nav>
 
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="flex-col pb-16">
             <img class="max-w-xs -ml-16 -mb-16 -mt-12 lg:mt-0" src={gifMain} />
             <h1 class="text-3xl lg:text-7xl leading-tight tracking-tighter py-4 font-righteous">Welcome to Alt Burger</h1>
@@ -114,7 +114,7 @@ function App() {
       </section>
 
       <section class="bg-center bg-no-repeat bg-cover" style={styleShow}>
-        <div class="mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="mx-auto px-0">
           <div class="flex flex-nowrap overflow-hidden justify-start py-10">
             <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow1}></img>
             <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow2}></img>
@@ -139,7 +139,7 @@ function App() {
       </section>
 
       <section style={stylePerks}>
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="flex-col py-10 sm:py-20">
             <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Alt Perks</h2>
             <div class="flex flex-wrap justify-around pt-4 sm:pt-10">
@@ -166,7 +166,7 @@ function App() {
       </section>
 
       <section style={styleRoadmap}>
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="flex-col py-10 sm:py-20">
             <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Alt Universe</h2>
             <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">We are here for the marathon, not the sprint, and in turn, we aim to push the boundaries, break into the physical world and do it our way. We are currently in the kitchen prepping our roadmap; in the meantime, here are our next steps</p>
@@ -210,7 +210,7 @@ function App() {
       </section>
 
       <section style={styleTeam}>
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="flex-col py-10 sm:py-20">
             <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Alt Team</h2>
             <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</p>
