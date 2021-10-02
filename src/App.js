@@ -115,15 +115,25 @@ function App() {
 
       <section class="bg-center bg-no-repeat bg-cover" style={styleShow}>
         <div class="mx-auto px-2 sm:px-6 lg:px-8">
-          <div class="flex flex-wrap xl:flex-nowrap overflow-hidden justify-center py-10">
-            <img class="max-h-40 sm:max-h-60 m-2 sm:mx-10 rounded-full" src={imgShow1}></img>
-            <img class="max-h-40 sm:max-h-60 m-2 sm:mx-10 rounded-full" src={imgShow2}></img>
-            <img class="max-h-40 sm:max-h-60 m-2 sm:mx-10 rounded-full" src={imgShow3}></img>
-            <img class="max-h-40 sm:max-h-60 m-2 sm:mx-10 rounded-full" src={imgShow4}></img>
-            <img class="max-h-60 mx-10 hidden lg:block rounded-full" src={imgShow5}></img>
-            <img class="max-h-60 mx-10 hidden lg:block rounded-full" src={imgShow6}></img>
-            <img class="max-h-60 mx-10 hidden lg:block rounded-full" src={imgShow7}></img>
-            <img class="max-h-60 mx-10 hidden lg:block rounded-full" src={imgShow8}></img>
+          <div class="flex flex-nowrap overflow-hidden justify-start py-10">
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow1}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow2}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow3}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow4}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow5}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow6}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow7}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow8}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow1}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow2}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow3}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow4}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow5}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow6}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow7}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow8}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow1}></img>
+            <img class="max-h-40 sm:max-h-60 my-2 mx-4 rounded-full ticker" src={imgShow2}></img>
           </div>
         </div>
       </section>
