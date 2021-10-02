@@ -1,4 +1,10 @@
 import { useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.scss';
 import gifMain from "./asset/main.gif";
 import imgShow1 from "./asset/1.jpeg";
@@ -101,8 +107,8 @@ function App() {
             <img class="max-w-xs -ml-16 -mb-16 -mt-12 lg:mt-0" src={gifMain} />
             <h1 class="text-3xl lg:text-7xl leading-tight tracking-tighter py-4 font-righteous">Welcome to Alt Burger</h1>
             <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">100 individually rendered 3D burgers dropping on ethereum NFT space. Each Alt Burger crafted from different elements, representing different fortune.</h2>
-            <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">> First ERC-721 tokens by Alt Lab.</p>
-            <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">> Hosted on IPFS.</p>
+            <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">&gt; First ERC-721 tokens by Alt Lab.</p>
+            <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">&gt; Hosted on IPFS.</p>
             <div class="mt-5">
               <button class="border-2 border-black font-extrabold rounded-full px-16 py-3 text-xl bg-green-100 hover:bg-green-300">MINT</button>
             </div>
