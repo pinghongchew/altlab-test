@@ -106,7 +106,7 @@ function App() {
           <div class="flex-col pb-16">
             <img class="max-w-xs -ml-16 -mb-16 -mt-12 lg:mt-0" src={gifMain} />
             <h1 class="text-3xl lg:text-7xl leading-tight tracking-tighter py-4 font-righteous">Welcome to Alt Burger</h1>
-            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">100 individually rendered 3D burgers dropping on ethereum NFT space. Each Alt Burger crafted from different elements, representing different fortune.</h2>
+            <h2 class="text-lg lg:text-xl py-4 font-dm-mono tracking-tighter">Alt Burger is a collection of 300 NFT. Like every artists create what they love, Alt burger ideas came from our founders obsess love for burger. To embrace their love for burgers further, they infused rare elements available from Altiverse into burger and make it into Alt Burger.</h2>
             <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">&gt; First ERC-721 tokens by Alt Lab.</p>
             <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">&gt; Hosted on IPFS.</p>
             <div class="mt-5">
@@ -151,19 +151,19 @@ function App() {
             <div class="flex flex-wrap justify-around pt-4 sm:pt-10">
               <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
                 <div class="text-2xl">Unique NFTs</div>
-                <div class="font-dm-mono pt-2">Your Alt Burger is uniquely minted on the Ethereum Blockchain enabling proof of ownership.</div>
-              </div>
-              <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
-                <div class="text-2xl">Commercial Rights</div>
-                <div class="font-dm-mono pt-2">You own the commercial rights and intellectual property of your Alt Burger. You can create and monetize from your Alt Burger without any limitation.</div>
+                <div class="font-dm-mono pt-2">Each NFT is minted onto the Etheruem block chain ensuring the rightful owner of each Alt Burger.</div>
               </div>
               <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
                 <div class="text-2xl">Community First</div>
-                <div class="font-dm-mono pt-2">We always listen to your ideas and suggestions. Please join our community to critique and inspire our future projects.</div>
+                <div class="font-dm-mono pt-2">We always listen to your ideas and suggestions. So join our community and voice out, your suggestion may be our next project.</div>
+              </div>
+              <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
+                <div class="text-2xl">Commercial Rights</div>
+                <div class="font-dm-mono pt-2">You have full commercial and Intellectual rights on the NFT, feel free to let your imagination runs wild and create your own derivatives.</div>
               </div>
               <div class="rounded-xl w-full sm:w-5/12 p-8 my-4 h-auto bg-green-100">
                 <div class="text-2xl">Exclusive Benefits</div>
-                <div class="font-dm-mono pt-2">You will be granted early access to our future projects. Other benefits like giveaway or merch discounts will be announced along the way.</div>
+                <div class="font-dm-mono pt-2">Every Proud Alt Burger owners enjoy early access to our future projects.</div>
               </div>
             </div>
           </div>
@@ -174,41 +174,34 @@ function App() {
       <section style={styleRoadmap}>
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="flex-col py-10 sm:py-20">
-            <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Alt Universe</h2>
-            <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">We are here for the marathon, not the sprint, and in turn, we aim to push the boundaries, break into the physical world and do it our way. We are currently in the kitchen prepping our roadmap; in the meantime, here are our next steps</p>
+            <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Our Kitchen</h2>
+            <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">We are the cook, and we will serve as long as there is a community. After our first release of the Alt Burger as our first menu, we have lots of menus planned and prepped in the kitchen for our community. Breaking the boundaries and stepping into the beyond such as Metaverse and opening a merch shop are always our ultimate goal. But in the meantime, here are our next steps:</p>
             <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
-              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">1</div>
+              <div class="text-4xl font-bold w-20 flex-shrink-0 animate-bounce hidden sm:block">1</div>
               <div class="flex flex-col">
                 <h4 class="font-righteous tracking-wide text-2xl">Alt Burger</h4>
-                <p>Alt Lab enters the NFT space and drops the very first NFT project.</p>
+                <p>Alt Burger will be our very first menu to be released in the NFT world, consist of 300 limited and uniquely crafted burgers to be served.</p>
               </div>
             </div>
             <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
-              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">2</div>
+              <div class="text-4xl font-bold w-20 flex-shrink-0 animate-bounce hidden sm:block">2</div>
               <div class="flex flex-col">
-                <h4 class="font-righteous tracking-wide text-2xl">Alt Community</h4>
-                <p>We will continue building our community and developing the Alt Universe.</p>
+                <h4 class="font-righteous tracking-wide text-2xl">Our Community</h4>
+                <p>Our kitchen is built around the community; feedbacks, ideas, suggestions will all be part of our upcoming menus and shape our next project. On top of that, Alt Burger owners will be given special privileges and discounts on our upcoming projects.</p>
               </div>
             </div>
             <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
-              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">3</div>
+              <div class="text-4xl font-bold w-20 flex-shrink-0 animate-bounce hidden sm:block">3</div>
               <div class="flex flex-col">
-                <h4 class="font-righteous tracking-wide text-2xl">Alt Merch</h4>
-                <p>We will start a merch store to sell 3D printed Alt Burger.</p>
+                <h4 class="font-righteous tracking-wide text-2xl">Our Menus</h4>
+                <p>We are not stopping here! After the release of Alt Burger, with enough support, we are going to work on more exciting menus to satisfy the hunger/thirst of the community and the NFT world.</p>
               </div>
             </div>
             <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
-              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">4</div>
+              <div class="text-4xl font-bold w-20 flex-shrink-0 animate-bounce hidden sm:block">4</div>
               <div class="flex flex-col">
-                <div class="font-righteous tracking-wide text-2xl">Alt Sandwich</div>
-                <div>We are going to start a new project to build up our community.</div>
-              </div>
-            </div>
-            <div class="flex border rounded-lg p-8 my-4 bg-purple-100 font-dm-mono text-lg items-center">
-              <div class="text-4xl font-bold w-20 animate-bounce hidden sm:block">5</div>
-              <div class="flex flex-col">
-                <div class="font-righteous tracking-wide text-2xl">Alt Avatar</div>
-                <div>We will drop the avatar collection for Alt Burger holders.</div>
+                <h4 class="font-righteous tracking-wide text-2xl">Giving Back</h4>
+                <p>Giving back to the community is always on our mind. Giveaways and charities are also part of our plans in future projects. </p>
               </div>
             </div>
           </div>
@@ -218,8 +211,8 @@ function App() {
       <section style={styleTeam}>
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="flex-col py-10 sm:py-20">
-            <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Alt Team</h2>
-            <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">ALT Labs is home to futuristic, moody, and cool 3D characters. We love anime and we love the 3D world. Our characters bring both worlds together. We live in a culture of collaboration and community. As we grow, we want to grow our community members, which are made up of creatives, technicians, and NFT enthusiasts.</p>
+            <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Meet our Team</h2>
+            <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">We are four close friends who truly believe in the blockchain technology and the NFT world. Being a foodie as we are, we created Alt Burgers as a platform for us to express our love for burgers and hope to share our creations with the world. Also, we are engineers.</p>
             <div class="flex flex-wrap lg:ml-0 lg:justify-around">
               <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
                 <img src={gifMain} class="h-40"></img>
