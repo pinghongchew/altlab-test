@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link,
@@ -27,18 +28,15 @@ ReactDOM.render(
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
     </Helmet>
     <Router>
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
       <Switch>
         <Route path="/burger">
           <App />
         </Route>
         <Route path="/">
-          <Redirect to='/burger' />
+          <Redirect to="/burger" />
         </Route>
       </Switch>
     </Router>
-
   </React.StrictMode>,
   document.getElementById('root')
 );
