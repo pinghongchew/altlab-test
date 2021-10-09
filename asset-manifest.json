@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/altlab-test/static/css/main.7de24a15.chunk.css",
-    "main.js": "/altlab-test/static/js/main.568b8372.chunk.js",
-    "main.js.map": "/altlab-test/static/js/main.568b8372.chunk.js.map",
+    "main.js": "/altlab-test/static/js/main.7eee7302.chunk.js",
+    "main.js.map": "/altlab-test/static/js/main.7eee7302.chunk.js.map",
     "runtime-main.js": "/altlab-test/static/js/runtime-main.860f0329.js",
     "runtime-main.js.map": "/altlab-test/static/js/runtime-main.860f0329.js.map",
     "static/js/2.a8bf6e3f.chunk.js": "/altlab-test/static/js/2.a8bf6e3f.chunk.js",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.860f0329.js",
     "static/js/2.a8bf6e3f.chunk.js",
     "static/css/main.7de24a15.chunk.css",
-    "static/js/main.568b8372.chunk.js"
+    "static/js/main.7eee7302.chunk.js"
   ]
 }
