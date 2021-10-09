@@ -1,25 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Helmet } from 'react-helmet';
-import iconLogo from "./asset/1.jpeg";
+// import iconLogo from "./asset/1.jpeg";
 
 ReactDOM.render(
   <React.StrictMode>
     <Helmet>
       <title>Alt Burger - NFT Collection</title>
-      <link rel="icon" href={iconLogo} />
+      {/* <link rel="icon" href={iconLogo} /> */}
       {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"></link> */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&family=DM+Sans:wght@700&family=Righteous&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&family=DM+Sans:wght@700&family=Righteous&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
     </Helmet>
-    <App />
+    <Router>
+      {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+      <Switch>
+        <Route path="/burger">
+          <App />
+        </Route>
+        <Route path="/">
+          <Redirect to='/burger' />
+        </Route>
+      </Switch>
+    </Router>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

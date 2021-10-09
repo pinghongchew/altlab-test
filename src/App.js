@@ -1,10 +1,4 @@
 import { useEffect, useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 import './App.scss';
 import gifMain from "./asset/main.gif";
 import imgShow1 from "./asset/1.jpeg";
@@ -98,7 +92,7 @@ function App() {
               <img src={gifMain} style={styleIconMain}></img>
               <h1 class="text-3xl font-righteous">Alt Lab</h1>
             </div>
-            <button class="border-2 border-gray-700 rounded-full px-6 py-2 inline-block font-extrabold hover:bg-green-300" onClick={connectWallet}>{displayAddress}</button>
+            <button class="disabled:opacity-50 border-2 border-gray-700 rounded-full px-6 py-2 inline-block font-extrabold hover:bg-green-300 disabled:bg-transparent" disabled onClick={connectWallet}>{displayAddress}</button>
           </div>
         </nav>
 
@@ -110,7 +104,7 @@ function App() {
             <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">&gt; First ERC-721 tokens by Alt Lab.</p>
             <p class="text-lg lg:text-xl py-2 font-dm-mono tracking-tighter">&gt; Hosted on IPFS.</p>
             <div class="mt-5">
-              <button class="border-2 border-black font-extrabold rounded-full px-16 py-3 text-xl bg-green-100 hover:bg-green-300">MINT</button>
+              <button class="disabled:opacity-50 border-2 border-black font-extrabold rounded-full px-16 py-3 text-xl bg-green-100 hover:bg-green-300 disabled:bg-transparent" disabled>MINT</button>
             </div>
             {/* <div class="flex-1 flex items-center">
               <video class="max-w-xs lg:max-w-screen-sm mx-auto" src={vidMain} autoPlay loop muted playsInline></video>
@@ -214,28 +208,28 @@ function App() {
             <h2 class="text-4xl lg:text-5xl font-righteous tracking-normal">Meet our Team</h2>
             <p class="text-md sm:text-xl font-dm-mono pt-2 sm:pt-4 pb-4 sm:pb-10">We are four close friends who truly believe in the blockchain technology and the NFT world. Being a foodie as we are, we created Alt Burgers as a platform for us to express our love for burgers and hope to share our creations with the world. Also, we are engineers.</p>
             <div class="flex flex-wrap lg:ml-0 lg:justify-around">
-              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
+              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg p-6">
                 <img src={gifMain} class="h-40"></img>
                 <div class="flex-col">
                   <div class="text-3xl">JAD</div>
-                  <div class="font-dm-mono">Developer</div>
+                  <div class="font-dm-mono">Software engineer with a passion for Web3 and truly believes that it will changes the world of art, gaming and more.  </div>
                 </div>
               </div>
-              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
+              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg p-6">
                 <img src={gifMain} class="h-40"></img>
                 <div class="flex-col">
                   <div class="text-3xl">Cirkus</div>
                   <div class="font-dm-mono">Artist</div>
                 </div>
               </div>
-              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
+              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg p-6">
                 <img src={gifMain} class="h-40"></img>
                 <div class="flex-col">
                   <div class="text-3xl">Tofu</div>
                   <div class="font-dm-mono">Artist</div>
                 </div>
               </div>
-              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg">
+              <div class="flex items-center rounded-lg mx-auto my-2 w-full sm:w-5/12 bg-yellow-100 rounded-lg p-6">
                 <img src={gifMain} class="h-40"></img>
                 <div class="flex-col">
                   <div class="text-3xl">JUN</div>
